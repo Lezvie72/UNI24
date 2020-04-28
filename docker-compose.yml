@@ -1,0 +1,16 @@
+version: '3'
+services:
+  autotests:
+    container_name: ${COMPOSE_PROJECT_NAME}_autotests_ui
+    hostname: ${COMPOSE_PROJECT_NAME}_autotests_ui
+    image: ${REGISTRY_ADDRESS}/${COMPOSE_PROJECT_NAME}_autotests_ui:${AUTOTESTS_UI_BRANCH}
+    volumes:
+      - ./ui-screenshots:/srv/autotests/ui-screenshots
+      - ./target:/srv/autotests/unicom24/target
+      - /dev/shm:/dev/shm
+    env_file:
+      - .env_tests
+    networks:
+      - ui_tests
+networks:
+  ui_tests:
