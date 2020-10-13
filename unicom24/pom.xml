@@ -16,7 +16,7 @@
         <maven-surefire-plugin.version>3.0.0-M4</maven-surefire-plugin.version>
         <maven-cucumber-reporting.version>3.15.0</maven-cucumber-reporting.version>
 
-        <junit.version>4.13</junit.version>
+        <junit.version>4.13.1</junit.version>
         <selenium-java.version>4.0.0-alpha-5</selenium-java.version>
         <cucumber-junit.version>5.0.0-RC1</cucumber-junit.version>
         <testng.version>7.0.0</testng.version>
