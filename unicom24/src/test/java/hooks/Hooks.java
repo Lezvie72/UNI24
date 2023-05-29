@@ -55,7 +55,8 @@ public class Hooks extends Base {
         ChromeOptions chromeOptions = new ChromeOptions();
         capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
         chromeOptions.setExperimentalOption("prefs", chromePrefs);
-        //chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--remote-allow-origins=*");
         chromeOptions.addArguments("--disable-dev-shm-usage");
         chromeOptions.addArguments("--no-sandbox");
         return chromeOptions;

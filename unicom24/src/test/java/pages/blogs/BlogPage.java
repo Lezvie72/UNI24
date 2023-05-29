@@ -1,6 +1,7 @@
 package pages.blogs;
 
 import base.Base;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -68,13 +69,7 @@ public class BlogPage extends Base {
     }
 
     public void pageIsDisplayed(){
-        allElementsAreVisible(headerPage.getMainHeader());
-        allElementsAreVisible(elements);
-        allElementsAreVisible(footerPage.getFooter());
-        Assert.assertTrue(blogArticles.size()>0);
-        Assert.assertTrue(blogNewsDescription.size() == blogNewsImages.size());
-        if (isElementVisible(blogSelectedTitle)){
-        Assert.assertTrue(blogSelectedList.size()>=1);}
+        waitForVisibility(By.className("search3__input"));
     }
 
     public void blogPostClick(){

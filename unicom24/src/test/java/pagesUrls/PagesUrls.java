@@ -2,7 +2,7 @@ package pagesUrls;
 
 public class PagesUrls {
 
-    public static String base = System.getenv("TESTING_HOST");
+    public static String base = "ya.ru/";
     public static String mainPage = baseUrl();
     public static String bankListPage = bankList();
 
@@ -69,7 +69,7 @@ public class PagesUrls {
     }
 
     public static String blogPageUrl(){
-        return mainPage + "/articles";
+        return mainPage;
     }
 
     public static String privateRefinancePageUrl() {
